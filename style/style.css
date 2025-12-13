@@ -1,0 +1,787 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html,body{
+    scroll-behavior: smooth; 
+}
+
+body.active{
+    overflow: hidden;
+}
+
+/* la partie de nigation */
+
+.navigation{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.navbar-menu {
+  position: fixed; /* fixé dès le départ */
+  top: 0px;     
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 40px;
+  z-index: 200;
+  background-color: white;
+  justify-content: space-between;
+  transition: top 0.5s ease, box-shadow 0.5s ease;
+}
+
+.navbar-menu.active {
+  box-shadow: 0px 5px 13px -3px rgba(0,0,0,0.54);
+}
+
+.logo-party a img{
+   width: 150px;
+   object-fit: cover;
+   height: 80px;
+   transition: transform 0.5s ease-in-out;
+}
+
+.logo-party a img:hover{
+ transform: translateX(5px);
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navlinks li a{
+    color: black;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navlinks li a:hover{
+   color: rgb(248, 126, 211);
+}
+
+.navlinks li a::before{
+    height: 2px;
+    width: 0%;
+    bottom: -6px;
+    left: 0;
+    background-color: rgb(248, 126, 211);
+    position: absolute;
+    border-radius: 10px;
+    content: "";
+    transition: 0.3s width ease;
+}
+
+.navlinks li a:hover::before{
+    width: 100%;
+}
+
+/* la partie des boutons de la navbar */
+.commun-btn{
+    background: rgba(255, 127, 217, 0.973);
+    color: white;
+    position: relative;
+    z-index: 100;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.commun-btn::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  background-color: rgba(0, 0, 255, 0.623);
+  left: 0;
+  border-radius: 0 0 5px 5px;
+  bottom: -0px;
+  z-index: -1; 
+  transition: bottom 0.3s ease;
+}
+
+.commun-btn:hover::before{
+   bottom:  -6px;
+}
+
+/* la partie du bouton de navigation */
+
+.button-navigation{
+    display: none;
+    height: 25px;
+    position: relative;
+    width: 25px;
+    border: none;
+    background: transparent;
+}
+
+.line{
+  position: absolute;
+  width: 100%;
+  background-color: blue;
+  left: 0;
+  height: 2px;
+ transition: transform 0.3s ease-in-out,
+     opacity 0.2s ease-in-out;
+}
+
+.button-navigation .L1{
+  transform: translateY(-8px);
+}
+
+.button-navigation .L3{
+  transform: translateY(8px);
+}
+
+.button-navigation.active .L1{
+  transform: translateY(0px) rotate(-135deg);
+}
+
+.button-navigation.active .L2{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.button-navigation.active .L3{
+  transform: translateY(0px) rotate(135deg);
+}
+
+
+/* la partie du block flottant des abonnées */
+
+.flottant-box{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    align-items: center;
+    pointer-events: auto;
+    justify-content: center;
+    backdrop-filter: opacity(10px);
+    background-color:  rgba(22, 19, 32, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: visibility 0.4s ease-in-out,
+     opacity 0.4s ease-in-out;
+}
+
+.flottant-box.active{
+   opacity: 1;
+   visibility: visible;
+}
+
+.abonnement-box{
+    padding: 70px 35px 55px 35px;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    background-image: url(../images/cta-bg-top.webp), url(../images/cta-bg-bottom.webp);
+    background-size: contain, contain;
+    background-repeat: no-repeat, no-repeat;
+    background-color: #fff;
+    background-position: top center, bottom center;
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(5px);
+}
+
+.abonnement-box.active{
+   transform: translateY(15px);
+}
+
+
+.btn-close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: none;
+  border-radius: 20px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  cursor: pointer;
+}
+
+.btn-close:hover{
+   background-color: white;
+}
+
+.btn-close:hover i{
+  color: black;
+}
+
+.btn-close i{
+   color: white;
+   font-size: 16px;
+}
+
+.titre-box{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.titre-box p{
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.name-block{
+   display: flex;
+   align-items: center;
+   gap: 30px;
+   margin-bottom: 15px;
+
+}
+
+.champs-form input{
+    width: 100%;
+    border: 1px solid #3333;
+    outline: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+::placeholder{
+  color: black;
+}
+
+.botton-btn{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#btn-abonne{
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.4s ease-in-out;
+}
+
+#btn-abonne:hover{
+    transform: scale(1.01);
+}
+
+small{
+    padding-left: 10px;
+}
+
+/* La partie des boutons de conne */
+.btn-google-facebook{
+    margin-top: 30px;
+    position: relative;
+}
+
+.or{
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.separation-line{
+  height: 2px;
+  background-color: #3333;
+  width: 40%;
+}
+
+.connexion-btn{
+  margin-top: 20px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.com{
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(210, 210, 252);
+  cursor: pointer;
+}
+
+.com i{
+  font-size: 20px;
+}
+
+
+
+/* la partie des texte principale  */
+
+.header-block{
+ height: 85vh;
+ background:  linear-gradient(to bottom, rgba(253, 210, 244, 0.452), rgba(70, 68, 68, 0.904)),url(../images/fond\ \(2\).jpg);
+ background-size: cover;
+ background-position: center;
+ padding: 50px 4%;
+}
+
+.litle-titre{
+    background-color:  rgba(255, 127, 217, 0.973);
+    max-width: 340px;
+    padding: 5px 5px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.texte-header h2{
+    margin-top: 15px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: rgb(224, 221, 221);
+}
+
+.texte-header h1{
+    margin-top: 15px;
+    font-size: 55px;
+    line-height: 60px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.texte-header p{
+    margin-top: 15px;
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: rgb(224, 221, 221);
+}
+
+.Nos-programme-btn{
+  background-color:  rgba(255, 127, 217, 0.973);
+  padding: 12px 20px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  position: relative;
+  z-index: 100;
+}
+
+.Nos-programme-btn::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  background-color: rgba(0, 0, 255, 0.623);
+  left: 0;
+  border-radius: 0 0 5px 5px;
+  bottom: -0px;
+  z-index: -1; 
+  transition: bottom 0.3s ease;
+}
+
+.Nos-programme-btn:hover::before{
+   bottom:  -6px;
+}
+
+
+/*partie partenaire de enia  */
+
+.partenair{
+ padding: 50px 20px;
+ background-color: #f4f9f8;
+}
+
+.box-partenair{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+   flex-wrap: wrap;
+}
+
+.box-partenair li  img{
+    max-width: 500px;
+    object-fit: cover;
+    max-height: 130px;
+    border-radius: 20px;
+}
+
+/* la partie des infos sur l'ecole */
+
+.information{
+   background-color: #fff;
+   padding: 60px 4%;
+}
+
+.sous-infos{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+}
+
+.information .inofs img{
+   max-width: 380px;
+   max-height: 550px;
+   border-radius: 10px;
+}
+
+.droite{
+  padding: 5px 0;
+}
+
+.droite .promo{
+   background-color: rgba(255, 127, 217, 0.247);;
+   padding: 5px 10px;
+   font-weight: 600;
+   max-width: 175px;
+   margin-bottom: 15px;
+   border-radius: 20px;
+}
+
+.droite h2{
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: blue;
+    font-weight: 550;
+}
+
+.description{
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+
+.decouvrir{
+   font-size: 15px;
+   background-color: rgba(255, 127, 217, 0.973);
+   color: #333;
+   padding: 12px 20px;
+   border-radius: 5px;
+   color: white;
+   position: relative;
+   z-index: 100;
+   font-weight: 600;
+   transition: all 0.3s;
+}
+
+.decouvrir::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  background-color: rgba(0, 0, 255, 0.623);
+  left: 0;
+  border-radius: 0 0 5px 5px;
+  bottom: -0px;
+  z-index: -1; 
+  transition: bottom 0.3s ease;
+}
+
+.decouvrir:hover::before{
+   bottom:  -6px;
+}
+
+#decouvrir span {
+    margin-left: 10px;
+}
+
+#decouvrir a:hover i{
+  animation: swipIcone 2s linear infinite;
+}
+
+
+
+
+/*  la partie concernant les bourse*/
+
+.box-bourse-etudiants{
+  padding: 50px 0;
+}
+
+
+.bourse_sous_box{
+   width: 100%;
+   background:linear-gradient(rgba(0, 0, 255, 0.404)), url(../images/cta-bg-top.webp), url(../images/cta-bg-bottom.webp);
+   padding: 50px 2%;
+   border-radius: 20px;
+   background-position: top center, bottom center;
+   background-repeat: no-repeat, no-repeat;
+   background-size: contain, contain;
+}
+
+.bourse-texte-header{
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.bourse-texte-header h2{
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 60px;
+    color: white;
+}
+
+.bourse-texte-header p{
+  font-size: 15px;
+  color: white;
+}
+
+/* la partie des cards pour l'info bourse */
+
+.liste-bourse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.card-bourse{
+    background-color: rgba(207, 207, 255, 0.089);
+    backdrop-filter: blur(50px);
+    border: 1px solid rgba(255, 255, 255, 0.295);
+    padding: 30px 30px 10px 30px;
+    border-radius: 20px;
+    transition: transform  0.4s ease-in-out;
+}
+
+.card-bourse:hover{
+    transform: translateY(-4px);
+    box-shadow: -1px 5px 14px 2px rgba(224,20,20,0.17);
+    -webkit-box-shadow: -1px 5px 14px 2px rgba(255, 240, 240, 0.17);
+    -moz-box-shadow: -1px 5px 14px 2px rgba(224,20,20,0.17);
+}
+
+.card-bourse div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.card-bourse span{
+   font-size: 40px;
+   font-weight: 500;
+   color: white;
+}
+
+.card-bourse div p{
+  color: rgb(247, 246, 246);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+
+
+
+
+
+/* la partie des medias query */
+
+@media (max-width: 700px) {
+
+  /* je vais essayer d'ajouter une classe active sur chaque element du menu genre lorsque le bloque va apparaitre que mes option puisse avoire comme une sorte d'annimation */
+
+  
+.navbar-menu {
+  padding: 30px 5px;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-party a img{
+   width: 90px;
+   object-fit: cover;
+   height: 30px;
+   transition: transform 0.5s ease-in-out;
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    left: 0;
+    gap: 20px;
+    width: 100%;
+    background-color: white;
+    top: 95px;
+    min-height: 90vh;
+    transform: translateX(-500px);
+    flex-direction: column;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navlinks.active{
+   transform: translateX(0px);
+}
+
+.navlinks li a{
+    font-size: 20px;
+}
+
+/* la partie des boutons de la navbar */
+
+.commun-btn{
+    background: rgba(255, 127, 217, 0.973);
+    padding: 5px 10px;
+    font-weight: 600;
+    margin-left: 10px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+/* la partie du block flottant des abonnées */
+
+.flottant-box{
+    padding: 0 2%;
+}
+
+.abonnement-box{
+   border-radius: 20px;
+   padding: 70px 20px 50px 20px;
+}
+
+.name-block{
+   gap:  15px;
+   width: 100%;
+   margin-bottom: 15px;
+   flex-direction: column;
+
+}
+
+.champs-form input{
+    width: 100%;
+    outline: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+/* la partie du bouton de navigation */
+
+.button-navigation{
+    padding: 5px;
+    overflow: hidden;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 127, 217, 0.973);
+    border-radius: 50%;
+}
+
+/* la partie des texte principale  */
+
+.header-block{
+ height: 80vh;
+ padding: 50px 2%;
+}
+
+.texte-header h1{
+    margin-top: 15px;
+    font-size: 45px;
+    line-height: 55px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.texte-header p{
+    margin-bottom: 45px;
+}
+
+
+
+/* la partie des infos sur l'ecole */
+
+.information{
+   background-color: #fff;
+   padding: 60px 2%;
+}
+
+.sous-infos{
+  flex-direction: column;
+  gap: 50px;
+}
+
+.information .inofs img{
+   max-width: 100%;
+}
+
+
+/*  la partie concernant les bourse*/
+
+.box-bourse-etudiants{
+  padding: 50px 0;
+}
+
+.bourse-texte-header{
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+
+}
+
+.bourse-texte-header h2{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.bourse-texte-header p{
+  font-size: 15px;
+}
+
+/* la partie des cards pour l'info bourse */
+.liste-bourse{
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+
+}
+
+
+
+
