@@ -169,7 +169,7 @@ body.active{
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 200;
+    z-index: 700;
     display: flex;
     visibility: hidden;
     opacity: 0;
