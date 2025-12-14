@@ -9,6 +9,7 @@ btnOpenAbonne.addEventListener("click", (e) =>{
     e.preventDefault();
     e.stopPropagation();
     blockFlottant.classList.add("active")
+    styleBody.classList.add("active")
     AbonneBox.classList.add("active")
 })
 
@@ -16,6 +17,7 @@ BtncloseAbonne.addEventListener("click",() =>{
    
    blockFlottant.classList.remove("active")
    AbonneBox.classList.remove("active")
+   styleBody.classList.remove("active")
 })
 
 // ------------------------------------------------
