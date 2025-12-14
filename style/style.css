@@ -847,7 +847,7 @@ small{
 }
   
 .navbar-menu {
-  padding: 0px 2%;
+  padding: 10px 2%;
   justify-content: space-between;
   align-items: center;
 }
@@ -997,7 +997,9 @@ small{
 .information .inofs img{
    max-width: 100%;
 }
-
+.sous-infos h2{
+  font-size: 30px;
+}
 
 /*  la partie concernant les bourse*/
 
