@@ -132,23 +132,27 @@ body.active{
 .line{
   position: absolute;
   width: 100%;
-  background-color: blue;
+  background-color: #333;
   left: 0;
-  height: 2px;
- transition: transform 0.3s ease-in-out,
+  height: 3px;
+   transition: transform 0.3s ease-in-out,
      opacity 0.2s ease-in-out;
 }
 
 .button-navigation .L1{
-  transform: translateY(-5px);
+  transform: translateY(-9px);
 }
 
 .button-navigation .L3{
-  transform: translateY(5px);
+  transform: translateY(9px);
 }
 
 .button-navigation.active .L1{
   transform: translateY(0px) rotate(-135deg);
+}
+
+.button-navigation.active .L2{
+  opacity: 0;;
 }
 
 .button-navigation.active .L3{
@@ -415,24 +419,64 @@ small{
 /*partie partenaire de enia  */
 
 .partenair{
- padding: 50px 20px;
+ padding: 50px 0;
  background-color: #f4f9f8;
 }
 
-.box-partenair{
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 30px;
+.partenair-title{
+ text-align: center;
+ margin-bottom: 50px;
 }
 
-.box-partenair li  img{
-    max-width: 500px;
-    object-fit: cover;
-    max-height: 130px;
-    border-radius: 20px;
+.partenair-title h2{
+font-size: 45px;
+font-weight: 400;
 }
+
+.contenaire {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  overflow: hidden; /* cache le débordement */
+}
+
+.contenaire::-webkit-scrollbar{
+  display: none;
+}
+
+.box-partenair{
+  display: flex;
+  gap: 30px;
+  animation: scroll 20s linear infinite;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); 
+  }
+}
+
+.box-partenair li {
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; 
+  border-radius: 20px;
+}
+
+.box-partenair li img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
 
 /* la partie des infos sur l'ecole */
 
@@ -716,8 +760,6 @@ small{
     display: block;
     height: 30px;
     width: 30px;
-    background-color: rgba(255, 127, 217, 0.973);
-    border-radius: 50%;
 }
 
 /* la partie des texte principale  */
@@ -743,27 +785,29 @@ small{
 /*partie partenaire de enia  */
 
 .partenair{
- padding: 50px 20px;
  background-color: #f4f9f8;
- overflow: hidden;
+}
+
+.partenair-title h2{
+font-size: 30px;
+font-weight: 600;
+line-height: 25px;
+}
+
+.contenaire{
+  width: 100%;
+  gap: 20px;
+  overflow-x: auto;
 }
 
 .box-partenair{
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 30px;
+   gap: 20px;
 }
 
-.box-partenair li  img{
-    max-width: 500px;
-    object-fit: cover;
-    max-height: 130px;
-    border-radius: 20px;
+.box-partenair li {
+  padding: 15px;
+  width: 120px; 
 }
-
-
 
 /* la partie des infos sur l'ecole */
 
@@ -939,15 +983,15 @@ small{
     padding: 10px;
     overflow: hidden;
     display: block;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+  
 }
 
 /* la partie des texte principale  */
 
 .header-block{
- height: 70vh;
+ height: 65vh;
  padding: 50px 2%;
 }
 
@@ -981,6 +1025,33 @@ small{
 }
 
 
+/*partie partenaire de enia  */
+
+.partenair{
+ padding: 40px 0;
+ background-color: #f4f9f8;
+}
+
+.partenair-title h2{
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 35px;
+}
+
+.contenaire{
+  width: 100%;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.box-partenair{
+   gap: 20px;
+}
+
+.box-partenair li {
+  padding: 15px;
+  width: 120px; 
+}
 
 /* la partie des infos sur l'ecole */
 
@@ -1025,10 +1096,24 @@ small{
 }
 
 /* la partie des cards pour l'info bourse */
+
 .liste-bourse{
     flex-direction: column;
     margin-bottom: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
