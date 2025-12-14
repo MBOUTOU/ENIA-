@@ -17,6 +17,12 @@ body.active{
     overflow: hidden;
 }
 
+.navigation{
+    background-color: white;
+    position: relative;
+    height: 100px;
+}
+  
 /* la partie de nigation */
 .navbar-menu {
   position: fixed; /* fixé dès le départ */
@@ -26,6 +32,7 @@ body.active{
   display: flex;
   align-items: center;
   padding: 5px 40px;
+  pointer-events: auto;
   z-index: 200;
   background-color: white;
   justify-content: space-between;
@@ -153,7 +160,8 @@ body.active{
 
 .flottant-box{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
     position: fixed;
     top: 0;
     right: 0;
@@ -417,7 +425,6 @@ small{
    align-items: center;
    justify-content: center;
    gap: 30px;
-   flex-wrap: wrap;
 }
 
 .box-partenair li  img{
@@ -676,7 +683,7 @@ small{
 
 .flottant-box{
     padding: 0 2%;
-    min-height: 100vh;
+    max-height: 100vh;
     overflow-y: auto;
 }
 
@@ -716,7 +723,7 @@ small{
 /* la partie des texte principale  */
 
 .header-block{
- height: 80vh;
+ height: 70vh;
  padding: 50px 2%;
 }
 
@@ -730,6 +737,247 @@ small{
 
 .texte-header p{
     margin-bottom: 45px;
+    font-size: 14px;
+}
+
+/*partie partenaire de enia  */
+
+.partenair{
+ padding: 50px 20px;
+ background-color: #f4f9f8;
+ overflow: hidden;
+}
+
+.box-partenair{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+}
+
+.box-partenair li  img{
+    max-width: 500px;
+    object-fit: cover;
+    max-height: 130px;
+    border-radius: 20px;
+}
+
+
+
+/* la partie des infos sur l'ecole */
+
+.information{
+   background-color: #fff;
+   padding: 60px 2%;
+}
+
+.sous-infos{
+  flex-direction: column;
+  gap: 50px;
+}
+
+.information .inofs img{
+   max-width: 100%;
+}
+
+
+/*  la partie concernant les bourse*/
+
+.box-bourse-etudiants{
+  padding: 50px 0 0 0;
+}
+
+.bourse-texte-header{
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+
+}
+
+.bourse-texte-header h2{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.bourse-texte-header p{
+  font-size: 15px;
+}
+
+.bourse-texte-header p br{
+   display: none;
+}
+
+/* la partie des cards pour l'info bourse */
+.liste-bourse{
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.card-bourse{
+    padding: 20px 20px 10px 20px;
+}
+
+.card-bourse div{
+  margin-bottom: 20px;
+}
+
+.card-bourse span{
+   font-size: 35px;
+   font-weight: 500;
+   color: white;
+}
+
+}
+
+
+
+
+
+
+
+@media (max-width: 360px) {
+
+  /* je vais essayer d'ajouter une classe active sur chaque element du menu genre lorsque le bloque va apparaitre que mes option puisse avoire comme une sorte d'annimation */
+
+.navigation{
+    background-color: white;
+    height: 50px;
+}
+  
+.navbar-menu {
+  padding: 0px 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-party a img{
+   width: 100px;
+   height: 45px;
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    left: 0;
+    gap: 20px;
+    width: 100%;
+    background-color: white;
+    top: 50px;
+    min-height: 100vh;
+    transform: translateX(-500px);
+    flex-direction: column;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navlinks.active{
+   transform: translateX(0px);
+}
+
+.navlinks li a{
+    font-size: 20px;
+}
+
+/*  */
+.button-party{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* la partie des boutons de la navbar */
+
+.commun-btn{
+    background: rgba(255, 127, 217, 0.973);
+    padding: 8px 10px;
+    font-weight: 600;
+    margin-left: 10px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.commun-btn::before{
+  position: unset;
+}
+
+/* la partie du block flottant des abonnées */
+
+.flottant-box{
+    padding: 0 2%;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.abonnement-box{
+   border-radius: 20px;
+   padding: 70px 20px 50px 20px;
+}
+
+.name-block{
+   gap:  15px;
+   width: 100%;
+   margin-bottom: 15px;
+   flex-direction: column;
+
+}
+
+.champs-form input{
+    width: 100%;
+    outline: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+/* la partie du bouton de navigation */
+
+.button-navigation{
+    padding: 10px;
+    overflow: hidden;
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* la partie des texte principale  */
+
+.header-block{
+ height: 70vh;
+ padding: 50px 2%;
+}
+
+.litle-titre{
+    max-width: 260px;
+    font-size: 12px;
+}
+
+.texte-header h2{
+    font-size: 14px;
+}
+
+.texte-header h1{
+    margin-top: 15px;
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 25px;
+}
+
+.texte-header h1 br{
+   display: none;
+}
+
+.texte-header p{
+    margin-bottom: 45px;
+    font-size: 12px;
+}
+
+.texte-header p br{
+   display: none;
 }
 
 
