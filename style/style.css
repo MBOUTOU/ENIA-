@@ -952,7 +952,7 @@ line-height: 25px;
 
 .flottant-box{
     padding: 0 2%;
-    max-height: 100vh;
+    height: 100vh;
     overflow-y: auto;
 }
 
@@ -1033,8 +1033,8 @@ line-height: 25px;
 }
 
 .partenair-title h2{
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 500;
   line-height: 35px;
 }
 
