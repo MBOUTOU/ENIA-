@@ -482,7 +482,7 @@ font-weight: 400;
 
 .information{
    background-color: #fff;
-   padding: 60px 4%;
+   padding: 60px 4% 30px 4%;
 }
 
 .sous-infos{
@@ -648,6 +648,137 @@ font-weight: 400;
   font-size: 15px;
   font-weight: 400;
 }
+
+
+/* la partie des filieres de enia */
+
+.contenaire-filiere{
+  padding: 30px 4%;
+}
+
+.title-filiere{
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.title-filiere h2{
+    font-size: 38px;
+    color: blue;
+    font-weight: 500;
+}
+
+.filiere-box{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-filiere{
+    background-color: #f4f9f8;
+    width: 380px;
+    height: 400px;
+    padding: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-filiere .img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.card-filiere:hover .img img {
+  transform: scale(1.1); /* agrandit l’image */
+}
+
+.element-filiere .title-option{
+  margin: 10px  0;
+}
+
+.element-filiere .title-option h3{
+   color: blue;
+}
+
+.liste-option{
+  padding-left: 28px;
+}
+
+.liste-option li{
+   list-style: circle;
+}
+
+.liste-option li p{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+
+.botton-btn-filiere{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.filiere-btn{
+   font-size: 15px;
+   background-color: rgba(255, 127, 217, 0.973);
+   color: #333;
+   padding: 12px 20px;
+   border-radius: 5px;
+   color: white;
+   position: relative;
+   z-index: 100;
+   font-weight: 600;
+   transition: all 0.3s;
+}
+
+.filiere-btn::before{
+   content: "";
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  background-color: rgba(0, 0, 255, 0.623);
+  left: 0;
+  border-radius: 0 0 5px 5px;
+  bottom: -0px;
+  z-index: -1; 
+  transition: bottom 0.3s ease;
+}
+
+.filiere-btn:hover::before{
+   bottom:  -6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -829,7 +960,7 @@ line-height: 25px;
 /*  la partie concernant les bourse*/
 
 .box-bourse-etudiants{
-  padding: 50px 0 0 0;
+  padding: 20px 0 0 0;
 }
 
 .bourse-texte-header{
@@ -872,6 +1003,46 @@ line-height: 25px;
    font-weight: 500;
    color: white;
 }
+
+
+/* la partie des filieres de enia */
+
+.contenaire-filiere{
+  padding: 0 2%;
+}
+
+.title-filiere{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.filiere-box{
+   flex-direction: column;
+}
+
+
+.card-filiere{
+    width: 100%;
+    height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -952,7 +1123,7 @@ line-height: 25px;
 
 .flottant-box{
     padding: 0 2%;
-    height: 100vh;
+    max-height: 100vh;
     overflow-y: auto;
 }
 

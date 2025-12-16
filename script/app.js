@@ -1,5 +1,5 @@
 // declaration des variables 
-const  btnOpenAbonne =  document.querySelector('.abonnement-btn');
+const btnOpenAbonne =  document.querySelector('.abonnement-btn');
 const blockFlottant = document.querySelector(".flottant-box");
 const AbonneBox = document.querySelector(".abonnement-box");
 const BtncloseAbonne = document.querySelector(".btn-close");
@@ -10,14 +10,12 @@ btnOpenAbonne.addEventListener("click", (e) =>{
     e.stopPropagation();
     blockFlottant.classList.add("active")
     AbonneBox.classList.add("active")
-    styleBody.classList.add("active")
 })
 
 BtncloseAbonne.addEventListener("click",() =>{
    
    blockFlottant.classList.remove("active")
    AbonneBox.classList.remove("active")
-   styleBody.classList.remove("active")
 })
 
 // ------------------------------------------------
