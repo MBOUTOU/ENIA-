@@ -430,7 +430,7 @@ small{
 
 .partenair-title h2{
 font-size: 45px;
-font-weight: 400;
+font-weight: bold;
 }
 
 .contenaire {
@@ -663,7 +663,7 @@ font-weight: 400;
 
 .title-filiere h2{
     font-size: 38px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .filiere-box{
