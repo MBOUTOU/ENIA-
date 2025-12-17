@@ -1,24 +1,28 @@
 // ce fichier est reservé pour tout ce qui concerne les animations 
-const sr = ScrollReveal({});
+const sr = ScrollReveal({
+     delay: 150,
+     distance: '100px',
+});
 
 sr.reveal(".texte-header h1", {
-    delay: 200,
-    distance: '100px',
-    duration: 900,
+    duration: 1000,
     origin: 'bottom',
 })
 
 sr.reveal(".information .inofs img", {
-    delay: 200,
-    distance: '200px',
     duration: 1500,
-    origin: 'left',
+    origin: 'bottom',
 })
 
+sr.reveal(".card-bourse", { 
+    duration: 1500,
+    interval: 100,
+})
 
-
-
-
+sr.reveal(".card-filiere", {
+    duration: 1500,
+    interval: 100,
+})
 
 
 

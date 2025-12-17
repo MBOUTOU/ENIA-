@@ -663,7 +663,6 @@ font-weight: 400;
 
 .title-filiere h2{
     font-size: 38px;
-    color: blue;
     font-weight: 500;
 }
 
@@ -944,7 +943,7 @@ line-height: 25px;
 
 .information{
    background-color: #fff;
-   padding: 60px 2%;
+   padding: 30px 2%;
 }
 
 .sous-infos{
@@ -1228,7 +1227,7 @@ line-height: 25px;
 
 .information{
    background-color: #fff;
-   padding: 60px 2%;
+   padding: 20px 2%;
 }
 
 .sous-infos{
