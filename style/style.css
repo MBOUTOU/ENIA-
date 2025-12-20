@@ -946,6 +946,8 @@ font-weight: bold;
     padding: 0 3%;
     max-height: 100vh;
     overflow-y: auto;
+    align-items: start;
+    padding-top: 100px;    
 }
 
 .abonnement-box{
@@ -1243,6 +1245,7 @@ line-height: 25px;
 .flottant-box{
     max-height: 100vh;
     overflow-y: auto;
+    padding-top: 30px;   
 }
 
 .name-block{
