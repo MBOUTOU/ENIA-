@@ -1,7 +1,7 @@
 // ce fichier est reservé pour tout ce qui concerne les animations 
 const sr = ScrollReveal({
      delay: 150,
-     distance: '70px',
+     distance: '90px',
       scale: 0.95,
 });
 
