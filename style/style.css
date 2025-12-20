@@ -165,7 +165,6 @@ body.active{
 .flottant-box{
     width: 100%;
     min-height: 100vh;
-    overflow-y: auto;
     position: fixed;
     top: 0;
     right: 0;
@@ -944,14 +943,14 @@ font-weight: bold;
 /* la partie du block flottant des abonnées */
 
 .flottant-box{
-    padding: 0 2%;
+    padding: 0 3%;
     max-height: 100vh;
     overflow-y: auto;
 }
 
 .abonnement-box{
    border-radius: 20px;
-   padding: 70px 20px 50px 20px;
+   padding: 70px 15px 40px 15px;
 }
 
 .name-block{
@@ -967,7 +966,11 @@ font-weight: bold;
     outline: none;
     padding: 12px 30px;
     font-size: 16px;
-    border-radius: 20px;
+    border-radius: 30px;
+}
+
+#btn-abonne{
+   border-radius: 30px;
 }
 
 /* la partie du bouton de navigation */
@@ -1050,7 +1053,7 @@ line-height: 25px;
 /*  la partie concernant les bourse*/
 
 .box-bourse-etudiants{
-  padding: 20px 3% 0 3%;
+  padding: 20px 0 0 0;
 }
 
 .bourse-texte-header{
@@ -1238,14 +1241,8 @@ line-height: 25px;
 /* la partie du block flottant des abonnées */
 
 .flottant-box{
-    padding: 0 2%;
     max-height: 100vh;
     overflow-y: auto;
-}
-
-.abonnement-box{
-   border-radius: 20px;
-   padding: 70px 20px 50px 20px;
 }
 
 .name-block{
@@ -1254,14 +1251,6 @@ line-height: 25px;
    margin-bottom: 15px;
    flex-direction: column;
 
-}
-
-.champs-form input{
-    width: 100%;
-    outline: none;
-    padding: 12px 30px;
-    font-size: 16px;
-    border-radius: 20px;
 }
 
 /* la partie du bouton de navigation */

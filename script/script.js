@@ -29,14 +29,6 @@ sr.reveal(".card-filiere", {
 
 
 
-// la partie des animations avec swiper 
-
-
-
-
-
-
-
 
 
 
