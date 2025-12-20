@@ -1,12 +1,14 @@
 // ce fichier est reservé pour tout ce qui concerne les animations 
 const sr = ScrollReveal({
      delay: 150,
-     distance: '100px',
+     distance: '70px',
+      scale: 0.95,
 });
 
-sr.reveal(".texte-header h1", {
-    duration: 1000,
-    origin: 'bottom',
+sr.reveal(".texte-header", {
+    duration: 900,
+    distance: '60px',
+   
 })
 
 sr.reveal(".information .inofs img", {

@@ -1043,6 +1043,9 @@ line-height: 25px;
    max-width: 100%;
 }
 
+.sous-infos .description{
+ font-size: 15px;
+}
 
 /*  la partie concernant les bourse*/
 
@@ -1354,6 +1357,10 @@ line-height: 25px;
 }
 .sous-infos h2{
   font-size: 30px;
+}
+
+.sous-infos .description{
+ font-size: 15px;
 }
 
 /*  la partie concernant les bourse*/
