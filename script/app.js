@@ -41,3 +41,14 @@ MenuButton.addEventListener("click", () =>{
     styleBody.classList.toggle('active')
     NavLinksItems.classList.add('active')
 })
+
+// la partie du boutonde whatsapp 
+
+const WhatsappBtn = document.querySelector(".whatsapp-btn");
+  WhatsappBtn.addEventListener("click", () =>{
+     const WhatsappNumber = "242068718977"
+     const WhatsappMessage = "Bonjour ENIA, je souhaite avoir plus d'informations sur vos programmes."
+     const encodedMessage = encodeURIComponent(WhatsappMessage); 
+     const url = `https://wa.me/${WhatsappNumber}?text=${encodedMessage}`;
+     window.open(url, "_blank"); 
+})

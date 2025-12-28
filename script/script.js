@@ -2,7 +2,7 @@
 const sr = ScrollReveal({
      delay: 150,
      distance: '90px',
-      scale: 0.95,
+      scale: 0.90,
 });
 
 sr.reveal(".texte-header", {
