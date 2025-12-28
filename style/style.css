@@ -1171,6 +1171,20 @@ line-height: 25px;
 }
 
 
+/* la partie du button de whatsapp contact directe  */
+
+.whatsapp-btn{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  height: 60px;
+  width: 60px;
+}
+
+.whatsapp-btn i{
+  font-size: 25px;
+}
+
 
 
 
@@ -1408,6 +1422,19 @@ line-height: 25px;
 }
 
 
+/* la partie du button de whatsapp contact directe  */
+
+.whatsapp-btn{
+  position: fixed;
+  right: 16px;
+  bottom: 20px;
+  height: 45px;
+  width: 45px;
+}
+
+.whatsapp-btn i{
+  font-size: 22px;
+}
 
 
 
