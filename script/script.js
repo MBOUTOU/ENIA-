@@ -18,7 +18,6 @@ sr.reveal(".information .inofs img", {
 
 sr.reveal(".card-bourse", { 
     duration: 1500,
-    interval: 100,
 })
 
 sr.reveal(".card-filiere", {
@@ -26,6 +25,11 @@ sr.reveal(".card-filiere", {
     interval: 100,
 })
 
+
+sr.reveal(".card-event", {
+    duration: 1500,
+    
+})
 
 
 
