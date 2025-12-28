@@ -885,12 +885,17 @@ font-weight: bold;
     transform: translateY(-5px);
 }
 
-.card-event:nth-child(2) .left_date{
-   background-color:  rgba(255, 127, 217, 0.973);
+.card-event:nth-child(1) .left_date{
+   background: linear-gradient(#333,#3333),url(../images/photo/porte.jpeg);
+   background-position: center;
+   background-size: cover;
+   width: 200px;
 }
 
 .card-event:nth-child(3) .left_date{
-   background-color:  black;
+   background-image: url(../images/photo/etudiants\ \(6\).jpg);
+   background-position: center;
+   background-size: cover;
 }
 
 .left_date{
