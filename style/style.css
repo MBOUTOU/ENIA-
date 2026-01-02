@@ -97,9 +97,9 @@ body.active{
     font-weight: bold;
     margin-left: 10px;
     border-bottom: 6px solid blue;
-    border-top: 0px dashed blue;
-    border-left: 0px dashed blue;
-    border-right: 0px dashed blue;
+    border-top: 1px dashed transparent;
+    border-left: 1px dashed transparent;
+    border-right: 1px dashed transparent;
     transition: all 0.4s ease;
 }
 
@@ -385,9 +385,9 @@ small{
   border-radius: 10px;
   font-weight: 600;
   border-bottom: 6px solid white;
-  border-top: 0px dashed white;
-  border-left: 0px dashed white;
-  border-right: 0px dashed white;
+  border-top: 1px dashed  transparent;
+  border-left: 1px dashed  transparent;
+  border-right: 1px dashed  transparent;
   transition: all 0.4s ease;
 }
 
@@ -518,9 +518,9 @@ font-weight: bold;
    z-index: 100;
    font-weight: bold;
    border-bottom: 6px solid blue;
-   border-top: 0px dashed blue;
-   border-left: 0px dashed blue;
-    border-right: 0px dashed blue;
+  border-top: 1px dashed transparent;
+  border-left: 1px dashed transparent;
+  border-right: 1px dashed transparent;
    transition: all 0.4s ease;
 }
 
@@ -703,9 +703,9 @@ font-weight: bold;
    z-index: 100;
    font-weight: bold;
    border-bottom: 6px solid blue;
-   border-top: 0px dashed blue;
-   border-left: 0px dashed blue;
-   border-right: 0px dashed blue;
+  border-top: 1px dashed transparent;
+  border-left: 1px dashed transparent;
+  border-right: 1px dashed transparent;
    transition: all 0.4s ease;
 }
 
@@ -800,6 +800,7 @@ font-weight: bold;
   justify-content: center;
   border-radius: 50%;
   border: none;
+  z-index: 300;
   pointer-events: auto;
   cursor: pointer;
   background-color: rgba(255, 127, 217, 0.973);
@@ -848,9 +849,9 @@ font-weight: bold;
   font-weight: bold;
   background-color: rgba(255, 127, 217, 0.973); 
   border-bottom: 6px solid blue;
-  border-top: 0px dashed blue;
-  border-left: 0px dashed blue;
-  border-right: 0px dashed blue;
+  border-top: 1px dashed transparent;
+  border-left: 1px dashed transparent;
+  border-right: 1px dashed transparent; 
   transition: all 0.3s ease-in-out;
 }
 
@@ -951,10 +952,162 @@ font-weight: bold;
 font-size: 20px;
 }
 
+/* section demande d'inscrition  */
+
+.Inscription{
+  padding: 120px 4%;
+  margin-top: 40px;
+  text-align: center;
+  background: linear-gradient(rgb(255, 127, 217),rgba(247, 91, 200, 0.521)), url(../images/photo/imgEnia5.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.Inscription h2{
+  font-size: 50px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.Inscription p{
+  font-size: 18px;
+  color:  white;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.Inscription a{
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(255, 127, 217, 0.973); 
+   border-bottom: 6px solid  blue;
+  border-top: 1px dashed transparent;
+  border-left: 1px dashed transparent;
+  border-right: 1px dashed transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.Inscription a:hover{
+  border-top: 1px dashed blue;
+  border-left: 1px dashed blue;
+  border-right: 1px dashed blue;
+}
+
+
+/* la partie du footer */
+
+.footer{
+  padding: 50px 4%;
+  /* background-color: #f4f9f8; */
+  background-color: black;
+  color: white;
+}
+
+.footer-box{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.footer-card{
+  min-width: 250px;
+
+}
+
+.footer-card img{
+  width: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.footer-card p{
+ color: rgb(156, 151, 151);
+ font-size: 15px;
+ margin-bottom: 20px;
+ 
+}
+
+.links-media-social{
+ display: flex;
+ gap: 20px;
+}
+
+.links-media-social a{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  background-color: #333;
+  border: 1px dashed transparent;
+}
+
+.links-media-social a:hover{
+ border: 1px dashed #fff;
+}
+
+.links-media-social a i{
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+}
+
+
+.footer-card h3{
+  margin: 15px 0;
+}
+
+.links_page{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links_page li a{
+  font-size: 18px;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+.links_page li a:hover{
+   padding-left: 4px;
+}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+.sepration{
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff5e;
+}
+
+.footer-end{
+  padding: 30px 0 0 0;
+  text-align: center;
+}
 
 
 
@@ -988,15 +1141,16 @@ font-size: 20px;
 
 .navlinks{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     gap: 30px;
     position: fixed;
     left: 0;
     gap: 20px;
+    padding: 40px 2%;
     width: 100%;
     background-color: white;
-    top: 95px;
+    top: 92px;
     min-height: 90vh;
     transform: translateX(-500px);
     flex-direction: column;
@@ -1299,6 +1453,38 @@ line-height: 25px;
 }
 
 
+/* section demande d'inscrition  */
+
+.Inscription{
+  padding: 60px 2%;
+  margin-top: 40px;
+}
+
+.Inscription h2{
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.Inscription p{
+  font-size: 15px;
+}
+
+.Inscription p br{
+  display: none;
+}
+
+
+/* la partie du footer */
+
+.footer{
+  padding: 50px 2%;
+}
+
+.footer-box{
+  flex-direction: column;
+  gap: 30px;
+}
+
 
 
 
@@ -1339,16 +1525,13 @@ line-height: 25px;
 }
 
 .navlinks{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 30px;
     position: fixed;
     left: 0;
     gap: 20px;
     width: 100%;
     background-color: white;
-    top: 50px;
+    top: 55px;
     min-height: 100vh;
     transform: translateX(-500px);
     flex-direction: column;

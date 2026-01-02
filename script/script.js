@@ -25,9 +25,14 @@ sr.reveal(".card-filiere", {
     interval: 100,
 })
 
-
 sr.reveal(".card-event", {
     duration: 1500,
+    
+})
+
+sr.reveal(".Inscription h2, .Inscription p , .Inscription a", {
+    duration: 1500,
+    interval: 100,
     
 })
 
