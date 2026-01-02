@@ -893,8 +893,14 @@ font-weight: bold;
    width: 200px;
 }
 
+.card-event:nth-child(2) .left_date{
+   background-image: linear-gradient(#333,#3333), url(../images/photo/sport.jpg);
+   background-position: center;
+   background-size: cover;
+}
+
 .card-event:nth-child(3) .left_date{
-   background-image: url(../images/photo/etudiants\ \(6\).jpg);
+   background: url(../images/photo/etudiants\ \(6\).jpg);
    background-position: center;
    background-size: cover;
 }

@@ -32,7 +32,7 @@ sr.reveal(".card-event", {
 
 sr.reveal(".Inscription h2, .Inscription p , .Inscription a", {
     duration: 1500,
-    interval: 100,
+    interval: 80,
     
 })
 
